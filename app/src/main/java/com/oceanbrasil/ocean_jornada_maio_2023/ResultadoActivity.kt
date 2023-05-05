@@ -17,7 +17,7 @@ class ResultadoActivity : AppCompatActivity() {
         val tvResultado = findViewById<TextView>(R.id.tvResultado)
         tvResultado .text = nomeDigitado
 
-        //Mecanismo botão voltar
+        //Mecanismo botão voltar.
         val btVoltar = findViewById<Button>(R.id.btVoltar)
         btVoltar.setOnClickListener {
             finish()
