@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
             val nomeDigitado = etNome.text.toString()
 
-            abrirNovaTelaIntent.putExtra("Nome_Digitado", nomeDigitado)
+            abrirNovaTelaIntent.putExtra("NOME_DIGITADO", nomeDigitado)
 
             //Registra a intent no Android
             startActivity(abrirNovaTelaIntent)
