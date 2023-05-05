@@ -1,5 +1,6 @@
 package com.oceanbrasil.ocean_jornada_maio_2023
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -21,6 +22,21 @@ class MainActivity : AppCompatActivity() {
             } else {
                 tvResultado.text = etNome.text
             }
+        }
+
+        //Abrir nova tela
+        val btAbrirNovaTela = findViewById<Button>(R.id.btAbrirNovaTela)
+
+        btAbrirNovaTela .setOnClickListener {
+            //Cria um intent para abrir nova tela
+            val abrirNovaTelaIntent = Intent(this, ResultadoActivity::class.java)
+
+            val nomeDigitado = etNome.text.toString()
+
+            abrirNovaTelaIntent.putExtra("Nome_Digitado", nomeDigitado)
+
+            //Registra a intent no Android
+            startActivity(abrirNovaTelaIntent)
         }
     }
 }
