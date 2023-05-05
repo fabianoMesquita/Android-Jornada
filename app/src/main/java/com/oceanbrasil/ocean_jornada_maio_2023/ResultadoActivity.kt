@@ -3,6 +3,7 @@ package com.oceanbrasil.ocean_jornada_maio_2023
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Button
 
 class ResultadoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,5 +16,11 @@ class ResultadoActivity : AppCompatActivity() {
         //Atualizamos o tvResultado com o nome digitado na outra tela
         val tvResultado = findViewById<TextView>(R.id.tvResultado)
         tvResultado .text = nomeDigitado
+
+        //Mecanismo botão voltar
+        val btVoltar = findViewById<Button>(R.id.btVoltar)
+        btVoltar.setOnClickListener {
+            finish()
+        }
     }
 }
